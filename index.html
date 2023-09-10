@@ -1,0 +1,1357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Javascript Project</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        table,
+        th,
+        td {
+            border: 3px solid black;
+        }
+
+        th,
+        td {
+            padding: 10px;
+        }
+
+        input[type="text"],
+        input[type="datetime-local"],
+        button {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .custom-div {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .custom-div h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .custom-div p {
+            font-size: 16px;
+            color: #888;
+        }
+
+        .custom-div button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .custom-div button:hover {
+            background-color: #0056b3;
+        }
+
+        .container {
+            background-color: brown;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .innn {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            font-size: 18px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .gagain {
+            display: none;
+        }
+
+        body {
+            background-color: whitesmoke;
+        }
+
+        #stopButton {
+            display: none;
+        }
+
+        #receButton {
+            display: none;
+        }
+
+        #receipt {
+            display: none;
+        }
+
+        #timer {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">swift JAVASCRIPT PROJECT</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#"></a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#task1">TASK 1</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#task2">TASK 2</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#task3">TASK 3</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#task4">TASK 4</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#task5">TASK 5</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#task6">TASK 6</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#task7">TASK 7</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#task8">TASK 8</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#task9">TASK 9</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#task10">TASK 10</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#task11">TASK 11</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#task12">TASK 12</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#task13">TASK 13</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#task14">TASK 14</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#task15">TASK 15</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#task16">TASK 16</a>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6" id="task1">
+                <div class="custom-div">
+                    <h2 class="lh-base"> <span
+                            style="background-color: black; color: white; padding: 7px; border-radius: 10px;"> TASK
+                            1:</span> DAYS TASKS
+                        USING IF / ELSE
+                    </h2>
+                    <p>Click the button below to know today's date</p>
+                    <button onclick="Task1()">Click Me</button>
+                    <br><br>
+                    <div id="task1id"></div>
+                </div>
+            </div>
+            <div class="col-md-6" id="task2">
+                <div class="custom-div">
+                    <h2 class="lh-base"> <span
+                            style="background-color: black; color: white; padding: 7px; border-radius: 10px;"> TASK
+                            2:</span> NIGERIA AGE QUIZ USING SWITCH
+                    </h2>
+                    <p>Click the button below to start guessing Nigeria age.</p>
+                    <button onclick="jaage()">START</button>
+                </div>
+            </div>
+
+            <div class="col-md-12" id="task3">
+                <div class="custom-div">
+                    <h2 class="lh-base"> <span
+                            style="background-color: black; color: white; padding: 7px; border-radius: 10px;"> TASK
+                            3:</span> TRACE THE HISTORY OF JAVASCRIPT (ES1 TO ES6)
+                    </h2>
+                    <h6>JavaScript was invented by Brendan Eich in 1995.
+                        It was developed for Netscape 2, and became the ECMA-262 standard in 1997.
+                        After Netscape handed JavaScript over to ECMA, the Mozilla foundation continued to develop
+                        JavaScript for the Firefox browser. Mozilla's latest version was 1.8.5. (Identical to ES5).
+                        Internet Explorer (IE4) was the first browser to support ECMA-262 Edition 1 (ES1).</h6>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">Year</th>
+                                <th scope="col">ECMA</th>
+                                <th scope="col">Browser</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1995</td>
+                                <td></td>
+                                <td>JavaScript was invented by Brendan Eich</td>
+                            </tr>
+                            <tr>
+                                <td>1996</td>
+                                <td></td>
+                                <td>Netscape 2 was released with JavaScript 1.0</td>
+                            </tr>
+                            <tr>
+                                <td>1997</td>
+                                <td></td>
+                                <td>JavaScript became an ECMA standard (ECMA-262)</td>
+                            </tr>
+                            <tr>
+                                <td>1997</td>
+                                <td>ES1</td>
+                                <td>ECMAScript 1 was released</td>
+                            </tr>
+                            <tr>
+                                <td>1997</td>
+                                <td>ES1</td>
+                                <td>IE 4 was the first browser to support ES1</td>
+                            </tr>
+                            <tr>
+                                <td>1998</td>
+                                <td>ES2</td>
+                                <td>ECMAScript 1 was released</td>
+                            </tr>
+                            <tr>
+                                <td>1998</td>
+                                <td></td>
+                                <td>Netscape 42 was released with JavaScript 1.3</td>
+                            </tr>
+                            <tr>
+                                <td>1999</td>
+                                <td>ES2</td>
+                                <td>IE 5 was the first browser to support ES2</td>
+                            </tr>
+                            <tr>
+                                <td>1999</td>
+                                <td>ES3</td>
+                                <td>ECMAScript 3 was released</td>
+                            </tr>
+                            <tr>
+                                <td>2000</td>
+                                <td>ES3</td>
+                                <td>IE 5.5 was the first browser to support ES3</td>
+                            </tr>
+                            <tr>
+                                <td>2000</td>
+                                <td></td>
+                                <td>Netscape 62 was released with JavaScript 1.5</td>
+                            </tr>
+                            <tr>
+                                <td>2000</td>
+                                <td></td>
+                                <td>Firefox 1 was released with JavaScript 1.5</td>
+                            </tr>
+                            <tr>
+                                <td>2008</td>
+                                <td>ES4</td>
+                                <td>ECMAScript 4 was abandoned</td>
+                            </tr>
+                            <tr>
+                                <td>2009</td>
+                                <td>ES5</td>
+                                <td>ECMAScript 5 was released</td>
+                            </tr>
+
+                            <tr>
+                                <td>2011</td>
+                                <td>ES5</td>
+                                <td>IE 9 was the first browser to support ES5 *</td>
+                            </tr>
+                            <tr>
+                                <td>2011</td>
+                                <td>ES5</td>
+                                <td>Firefox 4 was released with JavaScript 1.8.5</td>
+                            </tr>
+                            <tr>
+                                <td>2012</td>
+                                <td>ES5</td>
+                                <td>Full support for ES5 in Safari 6</td>
+                            </tr>
+                            <tr>
+                                <td>2012</td>
+                                <td>ES5</td>
+                                <td>Full support for ES5 in IE 10</td>
+                            </tr>
+                            <tr>
+                                <td>2012</td>
+                                <td>ES5</td>
+                                <td>Full support for ES5 in Chrome 23</td>
+                            </tr>
+                            <tr>
+                                <td>2013</td>
+                                <td>ES5</td>
+                                <td>Full support for ES5 in Firefox 21</td>
+                            </tr>
+                            <tr>
+                                <td>2013</td>
+                                <td>ES5</td>
+                                <td>Full support for ES5 in Opera 15</td>
+                            </tr>
+                            <tr>
+                                <td>2014</td>
+                                <td>ES5</td>
+                                <td>Full support for ES5 in all browsers</td>
+                            </tr>
+                            <tr>
+                                <td>2015</td>
+                                <td>ES6</td>
+                                <td>ECMAScript 6 was released</td>
+                            </tr>
+                            <tr>
+                                <td>2016</td>
+                                <td>ES6</td>
+                                <td>Full support for ES6 in Chrome 51</td>
+                            </tr>
+                            <tr>
+                                <td>2016</td>
+                                <td>ES6</td>
+                                <td>Full support for ES6 in Opera 38</td>
+                            </tr>
+                            <tr>
+                                <td>2016</td>
+                                <td>ES6</td>
+                                <td>Full support for ES6 in Safari 10</td>
+                            </tr>
+                            <tr>
+                                <td>2017</td>
+                                <td>ES6</td>
+                                <td>Full support for ES6 in Firefox 54</td>
+                            </tr>
+                            <tr>
+                                <td>2017</td>
+                                <td>ES6</td>
+                                <td>Full support for ES6 in Edge 15</td>
+                            </tr>
+                            <tr>
+                                <td>2018</td>
+                                <td>ES6</td>
+                                <td>Full support for ES6 in all browsers **</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+
+
+            <div class="col-md-6" id="task4">
+                <div class="custom-div">
+                    <h2 class="lh-base"> <span
+                            style="background-color: black; color: white; padding: 7px; border-radius: 10px;"> TASK
+                            4:</span>SIMPLE CALCULATOR
+                    </h2>
+                    <div class="calculator-container" align="center">
+                        <input type="text" class="innn" id="value11" placeholder="Enter number">
+                        <br>
+                        <span id="span1"></span>
+                        <br>
+                        <input type="text" class="innn" id="value22" placeholder="Enter number">
+                        <br>
+                        <br>
+                        <input type="button" class="btn btn-primary" onclick="plus()" value="+">
+                        <input type="button" class="btn btn-primary" onclick="minus()" value="-">
+                        <input type="button" class="btn btn-primary" onclick="multiply()" value="*">
+                        <input type="button" class="btn btn-primary" onclick="divide()" value="/">
+                        <br> <br>
+                        <p>= <span id="result11"
+                                style="border: 2px solid black; font-weight: bold; padding: 10px;">Answer is
+                                here</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6" id="task5">
+                <div class="custom-div">
+                    <h2 class="lh-base"> <span
+                            style="background-color: black; color: white; padding: 7px; border-radius: 10px;"> TASK
+                            5:</span>INVESTMENT CALCULATOR
+                    </h2>
+                    <label for="input2" class="form-label mb-1">AMOUNT</label>
+                    <input class="form-control mb-3" type="text" id="val" placeholder="input amount here" />
+
+                    <select class="form-select mb-3" name="" id="op">
+                        <option value="1">1 MONTH</option>
+                        <option value="2">2 MONTH</option>
+                        <option value="3">3 MONTH</option>
+                        <option value="4">4 MONTH</option>
+                        <option value="5">5 MONTH</option>
+                        <option value="6">6 MONTH</option>
+                        <option value="7">7 MONTH</option>
+                        <option value="8">8 MONTH</option>
+                        <option value="9">9 MONTH</option>
+                        <option value="10">10 MONTH</option>
+                        <option value="11">11 MONTH</option>
+                        <option value="13">12 MONTH</option>
+                    </select>
+                    <button type="button" class="btn btn-sm btn-secondary d-flex justify-content-center"
+                        onclick="calcc()">Calculate</button>
+                    <br>
+                    <h6>The Investment rate is 10% per month
+                    </h6>
+                    <h5 id="resultin"></h5>
+                </div>
+            </div>
+
+            <div class="col-md-6" id="task6">
+                <div class="custom-div">
+                    <h2 class="lh-base"> <span
+                            style="background-color: black; color: white; padding: 7px; border-radius: 10px;"> TASK
+                            6:</span>LOAN CALCULATOR
+                    </h2>
+                    <label for="input2" class="form-label mb-1">AMOUNT TO BE COLLECTED</label>
+                    <input class="form-control mb-3" type="text" id="vall" placeholder="input amount here" />
+                    <label for="input2" class="form-label mb-1">LOAN RATE</label>
+                    <input class="form-control mb-3" type="text" id="valk" placeholder="input the loan rate here (%)" />
+
+                    <select class="form-select mb-3" name="" id="opp">
+                        <option value="1">1 MONTH</option>
+                        <option value="2">2 MONTH</option>
+                        <option value="3">3 MONTH</option>
+                        <option value="4">4 MONTH</option>
+                        <option value="5">5 MONTH</option>
+                        <option value="6">6 MONTH</option>
+                        <option value="7">7 MONTH</option>
+                        <option value="8">8 MONTH</option>
+                        <option value="9">9 MONTH</option>
+                        <option value="10">10 MONTH</option>
+                        <option value="11">11 MONTH</option>
+                        <option value="12">12 MONTH</option>
+                    </select>
+                    <button type="button" class="btn btn-sm btn-secondary d-flex justify-content-center"
+                        onclick="taskl()">Calculate</button>
+                    <br>
+                    <h6>The loan rate is <span id="loanper"></span>% per month
+                    </h6>
+                    <h5 id="resultini"></h5>
+                </div>
+            </div>
+
+
+            <div class="col-md-6" id="task7">
+                <div class="custom-div">
+                    <h2 class="lh-base"> <span
+                            style="background-color: black; color: white; padding: 7px; border-radius: 10px;"> TASK
+                            7:</span> DIFFERENCE BETWEEN LET,CONST AND VAR.
+                    </h2>
+                    <ul style="font-size:17px; font-weight: bold;">
+                        <li>var declarations are globally scoped or function scoped while let and const are block
+                            scoped.</li>
+                        <li>var variables can be updated and re-declared within its scope; let variables can be updated
+                            but not re-declared; const variables can neither be updated nor re-declared.</li>
+                        <li>They are all hoisted to the top of their scope. But while var variables are initialized with
+                            undefined, let and const variables are not initialized.</li>
+                        <li>While var and let can be declared without being initialized, const must be initialized
+                            during declaration.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-6" id="task8">
+                <div class="custom-div">
+                    <h2 class="lh-base"> <span
+                            style="background-color: black; color: white; padding: 7px; border-radius: 10px;"> TASK
+                            8:</span> GUESS MY NUMBER GAME
+                    </h2>
+                    <div class="top" align="center">
+                        <h3 class="gnah">
+                            Start Guessing......
+                        </h3> <br>
+                        <input class="form-control gmynumber" placeholder="guess my number between 1 and 20"><br>
+                        <h2 class="gnumber">The number is ??</h2><br>
+                        <button class="gcheck">Check</button>
+                        <button class="gagain">PLAY AGAIN</button>
+                        <h1 class="highestscore" style="color: blue;">
+                            Highest Score: <span id="ghigh">0</span></h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6" id="task9">
+                <div class="custom-div">
+                    <h2 class="lh-base"> <span
+                            style="background-color: black; color: white; padding: 7px; border-radius: 10px;"> TASK
+                            9:</span>HOTEL BOOKING WITH COUNTDOWN
+                    </h2>
+                    <h1>Hotel rentals</h1>
+                    <input id="hdays">
+                    <button type="button" onclick="click1()">Click to Calculate</button>
+                    <div>
+                        <p style="font-size: 30px; color: blue;">AMOUNT FOR THE DAYS:<span id="22price">0</span></p>
+                        <p style="font-size: 30px; color: blue;">TIME LEFT: <span id="33price">0</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6" id="task10">
+                <div class="custom-div">
+                    <h2 class="lh-base"> <span
+                            style="background-color: black; color: white; padding: 7px; border-radius: 10px;"> TASK
+                            10:</span> DIGITAL TIME
+                    </h2>
+                    <div style="background-color: cyan; color: red;  width: 90%;  margin: 0px auto;">
+                        <span id="ddhrs" style=" color: red;
+                        font-size: 50px;
+                        font-weight: bold;"></span>
+                        <span style=" color: red;
+                        font-size: 50px;
+                        font-weight: bold;">:</span>
+                        <span style=" color: red;
+                        font-size: 50px;
+                        font-weight: bold;" id="ddMin"></span>
+                        <span style=" color: red;
+                        font-size: 50px;
+                        font-weight: bold;">:</span>
+                        <span style=" color: red;
+                        font-size: 50px;
+                        font-weight: bold;" id="ddSec"></span>
+                        <span style=" color: red;
+                        font-size: 50px;
+                        font-weight: bold;"> </span>
+                        <span style=" color: red;
+                        font-size: 50px;
+                        font-weight: bold;" id="ampm"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6" id="task11">
+                <div class="custom-div">
+                    <h2 class="lh-base"> <span
+                            style="background-color: black; color: white; padding: 7px; border-radius: 10px;"> TASK
+                            11:</span> PRIME NUMBER FROM (1-70)
+                    </h2>
+                    <h3>Click the button below to get prime number from (1-70)</h3>
+                    <p style="text-align: centre;">Using loop</p><br>
+                    <button onclick="prime2()"> Click</button>
+                </div>
+            </div>
+
+            <div class="col-md-6" id="task12">
+                <div class="custom-div">
+                    <h2 class="lh-base"> <span
+                            style="background-color: black; color: white; padding: 7px; border-radius: 10px;"> TASK
+                            12:</span> UBER RECEIPT SYSMEN
+                    </h2>
+                    <h1 id="headerr">UBER BOOKING SYSTEM</h1>
+
+                    <div id="destina">
+                        <!-- <input type="text" placeholder="pick up point" id="from">
+                        <input type="text" placeholder="your destination" id="to"> -->
+                        <div class="row g-3">
+                            <div class="col-lg-6 col-sm-12">
+                                <input type="text" class="form-control" placeholder="pick up point" id="from">
+                                <!-- <span id="roor1"></span> -->
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="your destination" id="to">
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <button id="startButton" class="btn btn-primary">Start Ride</button>
+                    <span id="trip1"
+                        style="text-align: center; font-size: 25px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"></span>
+                    <p id="timer"
+                        style="text-align: center; font-size: 50px; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
+
+                        <span id="min">00</span><span>:</span><span id="sec">00</span>
+                    </p>
+                    <button id="stopButton" class="btn btn-danger mb-3">Stop Ride</button>
+                    <button id="receButton" class="btn btn-info mb-3">Generate receipt</button>
+                    <div id="receipt" style="color: red;">
+                        <h1>Your receipt</h1>
+
+
+                        <p>Trip detail:<span>from </span><span id="fro1"></span><span> to</span><span id="fro2"></span>
+                        </p>
+
+                        <p id="1price">Base Fare is 800 naira</p>
+                        <div style=" display: flex;
+                        justify-content: space-between;
+                        margin-bottom: 10px;"> <span>Time Used: </span><span id="5price" style="text-align: right;
+                        font-weight: bold;
+                        font-size: 18px;">0</span></div>
+
+                        <div style=" display: flex;
+                        justify-content: space-between;
+                        margin-bottom: 10px;">
+                            <span>Duraton fare:</span><span id="6price" style="text-align: right;
+                            font-weight: bold;
+                            font-size: 18px;">0</span>
+                        </div>
+
+                        <div style=" display: flex;
+                        justify-content: space-between;
+                        margin-bottom: 10px;">
+                            <span>Total:</span><span id="2price" style="text-align: right;
+                            font-weight: bold;
+                            font-size: 18px;">0</span>
+                        </div>
+                        <div style=" display: flex;
+                        justify-content: space-between;
+                        margin-bottom: 10px;"> <span>Tax: </span><span id="3price" style="text-align: right;
+                        font-weight: bold;
+                        font-size: 18px;">0</span></div>
+
+                        <p style="text-align: right;
+                        font-weight: bold;
+                        font-size: 18px;">Amount to pay: <span id="4price">0</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6" id="task13">
+                <div class="custom-div">
+                    <h2 class="lh-base"> <span
+                            style="background-color: black; color: white; padding: 7px; border-radius: 10px;"> TASK
+                            13:</span> PRIME NUMBER FROM (1-70)
+                    </h2>
+                    <h3>Click the button below to get prime number from (1-70)</h3>
+                    <p style="text-align: centre;">Using loop</p><br>
+                    <button onclick="prime2()"> Click</button>
+                </div>
+            </div>
+
+            <div class="col-md-12" id="task14">
+                <div class="custom-div">
+                    <h2 class="lh-base"> <span
+                            style="background-color: black; color: white; padding: 7px; border-radius: 10px;"> TASK
+                            14:</span>NORMAL TO DO LIST
+                    </h2>
+                    <input type="text" id="addinpt">
+                    <button id="addbtn">add</button><br>
+                    <ol id="Tlist"></ol>
+                </div>
+            </div>
+
+            <div class="col-md-12" id="task15">
+                <div class="custom-div">
+                    <h2 class="lh-base"> <span
+                            style="background-color: black; color: white; padding: 7px; border-radius: 10px;"> TASK
+                            15:</span>SECOND TO DO LIST
+                    </h2>
+                    <input type="text" id="1input">
+                    <input type="datetime-local" id="1date">
+                    <br><br>
+                    <button onclick="todo()">ADD+</button>
+                    <br>
+                    <br>
+                    <table border="3" cellpadding="10" width="80%">
+                        <thead>
+                            <tr>
+                                <td>Task</td>
+                                <td>from-to</td>
+                                <td>Delete</td>
+                                <td>Mark</td>
+                                <td>Edit</td>
+                                <td>countdown</td>
+                            </tr>
+                        </thead>
+                        <tbody id="1body">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-md-12" id="task16">
+                <div class="custom-div">
+                    <h2 class="lh-base"> <span
+                            style="background-color: black; color: white; padding: 7px; border-radius: 10px;"> TASK
+                            16:</span> ADD AND DELETE MACHINE
+                    </h2>
+                    <div class="table" style="height: 400px; overflow-y: scroll;">
+                        <h1>Select your subject</h1>
+                        <div style="display: flex; flex-direction: row; justify-content: space-around;">
+                            <div>
+                                <table>
+                                    <h3>Available Subjects</h3>
+                                    <thead>
+                                        <tr>
+                                            <th>Subject</th>
+                                            <th>Select</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="availableSubjectsBody"></tbody>
+                                </table>
+                            </div>
+                            <div>
+                                <table cellpadding="10">
+                                    <h3>Selected Subjects</h3>
+                                    <thead>
+                                        <tr>
+                                            <th>Selected</th>
+                                            <th>Delect</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="selectedSubjectsBody"></tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+        crossorigin="anonymous"></script>
+
+    <script>
+        //TASK 1 
+        function Task1() {
+            let task1set = document.querySelector('#task1id')
+            let oneday = new Date().getDay()
+            let days0 = ['Sunday', 'Monday', "Tuesday", 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+            if (oneday == 0) {
+                task1set.innerHTML = (`<h2>Today is ${days0[oneday]} - Go to church</h2>`)
+            } else if (oneday == 5) {
+                task1set.innerHTML = (`<h2>Today is ${days0[oneday]} - Go to mosque</h2>`)
+            } else if (oneday == 6) {
+                task1set.innerHTML = (`<h2>Today is ${days0[oneday]} - Go to party</h2>`)
+            } else {
+                task1set.innerHTML = (`<h2>Today is ${days0[oneday]} - Go to work</h2>`)
+            }
+        }
+    </script>
+
+    <script>
+        // TASK 2
+        function jaage() {
+            let age = prompt('what is Nigerian age ?');
+            let d = +age;
+            switch (d) {
+                case 50: alert('not close');
+                    break;
+                case 59: alert('close');
+                    break;
+                case 60: alert(' almost correct');
+                    break;
+                case 63: alert('correct');
+                    break;
+                case 64: alert('close');
+                    break;
+                case 65: alert('close');
+                    break;
+                default: alert('wrong');
+            };
+        };
+    </script>
+    <script>
+        //TASK 4
+        function plus() {
+            let num1 = document.getElementById("value11").value;
+            let num2 = document.getElementById("value22").value;
+            let sum = Number(num1) + Number(num2);
+            document.getElementById("result11").innerHTML = sum;
+            document.getElementById("span1").innerHTML = "+";
+        }
+
+        function minus() {
+            let num1 = document.getElementById("value11").value;
+            let num2 = document.getElementById("value22").value;
+            document.getElementById("result11").innerHTML = num1 - num2;
+            document.getElementById("span1").innerHTML = "-";
+        }
+
+        function multiply() {
+            let num1 = document.getElementById("value11").value;
+            let num2 = document.getElementById("value22").value;
+            document.getElementById("result11").innerHTML = num1 * num2;
+            document.getElementById("span1").innerHTML = "*";
+        }
+
+        function divide() {
+            let num1 = document.getElementById("value11").value;
+            let num2 = document.getElementById("value22").value;
+            document.getElementById("result11").innerHTML = num1 / num2;
+            document.getElementById("span1").innerHTML = "/";
+        }
+    </script>
+    <script>
+        // TASK 5
+        function calcc() {
+            let so = Number(document.getElementById("val").value);
+            let bb = 10 / 100 * so;
+            let dod = document.getElementById("op").value;
+            let co = bb * dod + so;
+            document.getElementById('resultin').innerHTML = `You payment is ${co} after ${dod} months `;
+        }
+    </script>
+    <script>
+        // TASK 6
+        function taskl() {
+            let inica = Number(document.querySelector(`#vall`).value);
+            let perca = Number(document.querySelector(`#valk`).value);
+            let monca = Number(document.querySelector(`#opp`).value);
+            let moncad = document.getElementById('loanper');
+            let Percentage = perca / 100;
+            let TotalAmount = inica * perca + inica;
+            let dmm = monca;
+            moncad.innerHTML = `${perca}`;
+            let perr = TotalAmount / monca;
+            document.querySelector(`#resultini`).innerHTML = ` Your monthly repayment will be ${perr} Naria with ${dmm} months for the payment and total amount of payment is ${TotalAmount} Naria`;
+        }
+    </script>
+    <script>
+        let dbg = document.querySelector('.top');
+        let dchanget = document.querySelector('.gnah');
+        let dchangeb = document.querySelector('.gnumber');
+        let dhigh = document.getElementById('ghigh');
+        let bcheck = document.querySelector('.gcheck');
+        let bagain = document.querySelector('.gagain');
+        secretNumber = Math.trunc(Math.random() * 20) + 1;
+        let score = 20;
+        let highestscore = 0;
+        console.log(secretNumber);
+
+        function scoreline() {
+            score = score - 4;
+            if (score == 0) {
+                dbg.style.backgroundColor = 'red';
+                dchanget.innerHTML = 'GAME OVER';
+                bcheck.style.display = 'none';
+                bagain.style.display = 'inline-block';
+                document.querySelector('.gmynumber').value = "";
+                dchangeb.innerHTML = `The Number is ${secretNumber}`;
+            };
+        };
+
+        let main = function () {
+            let myGuess = Number(document.querySelector('.gmynumber').value);
+            if (!myGuess || myGuess < 1 || myGuess > 20) {
+                dchanget.innerHTML = 'your guess must be between 1 and 20 only';
+                dchanget.style.color = "purple";
+                document.querySelector('.gmynumber').value = "";
+                scoreline();
+            } else if (myGuess > secretNumber) {
+                dchanget.innerHTML = 'your guess is too high';
+                dchanget.style.color = "red";
+                document.querySelector('.gmynumber').value = "";
+                scoreline();
+            } else if (myGuess < secretNumber) {
+                dchanget.innerHTML = 'your guess is too low';
+                dchanget.style.color = "blue";
+                document.querySelector('.gmynumber').value = "";
+                scoreline();
+
+            } else if (myGuess == secretNumber) {
+                dchanget.innerHTML = `correct, the number is ${secretNumber}`;
+                dchanget.style.color = "black";
+                dbg.style.backgroundColor = "green";
+                dbg.style.color = "white";
+                dchangeb.innerHTML = `SCORE: ${score}`;
+                dchangeb.style.color = 'brown';
+                document.querySelector('.gmynumber').value = "";
+                bcheck.style.display = 'none'
+                bagain.style.display = 'inline-block';
+                document.querySelector('.gmynumber').value = '';
+                if (highestscore < score) {
+                    document.querySelector('#ghigh').innerHTML = score;
+                }
+            }
+        };
+        bcheck.addEventListener('click', main);
+        bagain.addEventListener('click', function () {
+            dchanget.innerHTML = 'Start guessing......';
+            dchanget.style.color = 'black';
+            bcheck.style.display = "inline-block"
+            bagain.style.display = "none"
+            document.querySelector('.gmynumber').value = '';
+            dbg.style.backgroundColor = 'white';
+            dchangeb.innerHTML = `The number is ??`;
+            score = 20;
+            secretNumber = Math.trunc(Math.random() * 20) + 1;
+            console.log(secretNumber);
+        })
+    </script>
+    <script>
+        // TASK 9
+        function click1() {
+            let new2 = parseInt(document.getElementById('hdays').value);
+            const xmas = new Date().getTime() + (new2 * 24 * 60 * 60 * 1000);
+            k = setInterval(function () {
+                let now = new Date().getTime();
+                let distance = xmas - now;
+                let hdays1 = Math.floor(distance / (24 * 60 * 60 * 1000));
+                let hhours = Math.floor(distance % (24 * 60 * 60 * 1000) / (60 * 60 * 1000));
+                let hminutes = Math.floor(distance % (60 * 60 * 1000) / (60 * 1000));
+                let hseconds = Math.floor(distance % (60 * 1000) / 1000);
+                document.getElementById('33price').innerHTML = `${hdays1}Days : ${hhours}Hrs : ${hminutes}Min : ${hseconds}Sec`;
+                if (distance <= 0) {
+                    clearInterval(k);
+                    document.getElementById('33price').innerHTML = 'YOUR TIME IS UP';
+                }
+            }, 1000);
+
+            document.getElementById('22price').innerHTML = (new2 * 5000);
+        }
+
+    </script>
+    <script>
+        // TASK 10
+        function Time() {
+            let dhours = new Date().getHours();
+            let dmins = new Date().getMinutes();
+            let dsecs = new Date().getSeconds();
+            if (dhours >= 12) {
+                document.getElementById('ampm').innerHTML = 'PM';
+            }
+            else {
+                document.getElementById('ampm').innerHTML = 'AM';
+            }
+            if (dhours > 12) {
+                dhours = dhours - 12;
+                dhours = `${0}` + `${dhours}`;
+            }
+            if (dmins < 10) {
+                dmins = `${0}` + `${dmins}`
+            }
+            if (dsecs < 10) {
+                dsecs = `${0}` + `${dsecs}`
+            }
+            document.getElementById('ddhrs').innerHTML = dhours;
+            document.getElementById('ddMin').innerHTML = dmins;
+            document.getElementById('ddSec').innerHTML = dsecs;
+        }
+        setInterval(Time, 1000)
+    </script>
+    <script>
+        // TASK 11
+        function prime2() {
+            let n;
+            n = prompt('Enter a number from 1 to 70');
+            if (!n || n < 1 || n > 70) {
+                alert(`Enter a number from 1 to 70`)
+            }
+            else if (n == 2) {
+                alert(`This is prime number`)
+            }
+            else {
+                let i;
+                for (i = 2; i < n; i++) {
+                    if (n % i == 0) {
+                        alert(`You are wrong, ${n} is not a prime number`);
+                        break;
+                    }
+                }
+                if (n == i) {
+                    alert(`This is a prime number`)
+                }
+            }
+        };
+    </script>
+    <script>
+        let timerr = document.getElementById('timer');
+        let destin = document.getElementById('destina');
+        let minn = document.getElementById('min');
+        let secc = document.getElementById('sec');
+        let headerr = document.getElementById('headerr');
+        let startt = document.getElementById('startButton');
+        let stopp = document.getElementById('stopButton');
+        let recee = document.getElementById('receButton');
+        let p1 = document.getElementById('2price');
+        let p2 = document.getElementById('3price');
+        let p3 = document.getElementById('4price');
+        let p4 = document.getElementById('6price');
+        let p5 = document.getElementById('5price');
+        let fromm = document.getElementById('from');
+        let too = document.getElementById('to');
+        let rece = document.getElementById('receipt');
+        let stopengine;
+        let ccc = 0;
+        let k;
+        let min1;
+        let tt2;
+
+        function engine() {
+            ++ccc;
+            let min1 = parseInt(ccc / 60);
+            let sec1 = ccc % 60;
+            min1 = (min1 < 10) ? "0" + min1 : min1;
+            sec1 = (sec1 < 10) ? "0" + sec1 : sec1;
+            minn.innerHTML = min1;
+            secc.innerHTML = sec1;
+            function calc() {
+
+            }
+        };
+        function count() {
+            k = setInterval(engine, 1000);
+        }
+        function startengine() {
+            count();
+            startt.style.display = "none";
+            timerr.style.display = "block";
+            stopp.style.display = "inline";
+            destin.style.display = "none";
+            document.getElementById('trip1').innerHTML = `Your destination from ${fromm.value} to ${too.value} is on going`;
+            headerr.style.display = "none";
+
+            if (!fromm.value || !too.value) {
+                alert("Please enter both the pickup point and destination.");
+                return false;
+            }
+
+            else {
+                return true
+            }
+        }
+
+        stopengine = function () {
+            clearInterval(k);
+            startt.style.display = "none";
+            stopp.style.display = "none";
+            // rece.style.display = "inline";
+            destin.style.display = "none";
+            timerr.style.display = "none";
+            recee.style.display = "inline";
+            document.getElementById('trip1').style.display = "none";
+            headerr.style.display = "none";
+
+        }
+        function receengine() {
+            recee.style.display = "none";
+            document.getElementById('trip1').innerHTML = `Your destination from ${fromm.value} to ${too.value} was successful Here is the receipt`;
+            rece.style.display = "inline";
+            document.getElementById('fro1').innerHTML = `${fromm.value}`;
+            document.getElementById('fro2').innerHTML = `  ${too.value}`;
+
+            let one = (800 * minn.innerHTML) + Math.floor((secc.innerHTML / 60) * 70);
+            p5.innerHTML = (minn.innerHTML) + ' ' + 'minutes' + ':' + (secc.innerHTML) + ' ' + 'seconds';
+            p4.innerHTML = one + 'Naira';
+            let amm = (one + 800);
+            p1.innerHTML = amm + 'Naira';
+
+
+            let two = (2 / 100) * (amm);
+            p2.innerHTML = two + 'Naira';
+
+            let three = amm + two;
+            p3.innerHTML = three + ' ' + 'Naira'
+
+            headerr.style.display = "none";
+        }
+        startt.addEventListener('click', startengine);
+        stopp.addEventListener('click', stopengine);
+        recee.addEventListener('click', receengine);
+    </script>
+    <script>
+        // TASK 14
+
+        const inpt = document.getElementById('addinpt');
+        const abtn = document.getElementById('addbtn');
+        const c = document.getElementById('Tlist');
+        function addtask() {
+            let d = document.createElement("li");
+            let e = document.createTextNode(inpt.value);
+            document.getElementById('addinpt').value = '';
+            d.appendChild(e);
+            c.appendChild(d);
+            let r = document.createElement('span');
+            let s = document.createTextNode('\u2714');
+            r.appendChild(s);
+            r.title = "mark done";
+            r.style.backgroundColor = "green";
+            r.style.color = 'white';
+            r.style.cursor = 'pointer';
+            r.className = "done";
+            d.appendChild(r);
+
+            let q = document.getElementsByClassName('done');
+            let z;
+            for (z = 0; z < q.length; z++) {
+                q[z].onclick = function () {
+                    this.parentNode.style.textDecoration = 'line-through'
+                }
+            }
+
+            let m = document.createElement('span');
+            let n = document.createTextNode('\u00d7');
+            m.appendChild(n);
+            m.title = "mark done";
+            m.style.backgroundColor = "red";
+            m.style.color = 'white';
+            m.style.cursor = 'pointer';
+            m.className = "not";
+            d.appendChild(m);
+
+            let g = document.getElementsByClassName('not');
+            let t;
+            for (t = 0; t < g.length; t++) {
+                g[t].onclick = function () {
+                    this.parentNode.style.display = 'none'
+                }
+            }
+
+        };
+        let kay = function () {
+            if (!document.getElementById('addinpt').value == '') {
+                addtask()
+            }
+        };
+        document.addEventListener('keydown', function (i) {
+            if (i.key === 'Enter' && !document.getElementById('addinpt').value == '') {
+                addtask()
+            }
+        })
+        abtn.addEventListener("click", kay);
+
+    </script>
+
+    <script>
+        let kas;
+        function todo() {
+
+            const inpt11 = document.getElementById('1input');
+            const taskDescription = inpt11.value.trim();
+
+            if (taskDescription === '') {
+                alert('Please enter a task description.');
+                return;
+            }
+
+            const date11 = document.getElementById('1date');
+            const selectedDateTime = date11.value;
+
+            if (!selectedDateTime) {
+                alert('Please select a valid date and time.');
+                return; // Exit the function if validation fails
+            }
+            // const inpt11 = document.getElementById('1input');
+            // const date11 = document.getElementById('1date');
+            const tbody11 = document.getElementById('1body');
+            let tabr11 = document.createElement(`tr`);
+            // 1st tr
+            let tabd11 = document.createElement(`td`);
+            let tabi11 = document.createTextNode(inpt11.value);
+            tabd11.appendChild(tabi11);
+            tabr11.appendChild(tabd11);
+            tbody11.appendChild(tabr11);
+            // 2nd tr
+            const inptt = document.getElementById('1date');
+            let inpth = inptt.value;
+            let inpthh = new Date(inpth).getTime();
+            let hourss = (Math.floor(inpthh % (24 * 60 * 60 * 1000) / (60 * 60 * 1000))) + 1;
+            let minutess = (Math.floor(inpthh % (60 * 60 * 1000) / (60 * 1000)));
+            hourss = (hourss < 10) ? "0" + hourss : hourss;
+            minutess = (minutess < 10) ? "0" + minutess : minutess;
+            let inpthx = `${hourss} : ${minutess}`
+            let chour = new Date().getHours();
+            let cmin = new Date().getMinutes();
+            chour = (chour < 10) ? "0" + chour : chour;
+            cmin = (cmin < 10) ? "0" + cmin : cmin;
+            let dispal = ` ${chour} : ${cmin}  --  ${inpthx} `;
+            let show1 = document.createTextNode(dispal);
+            let show2 = document.createElement(`td`);
+            show2.appendChild(show1);
+            tabr11.appendChild(show2);
+
+            // DELETE
+            let del11 = document.createElement(`td`)
+            let del22 = document.createElement(`span`);
+            let del33 = document.createTextNode(`\u00d7`);
+            del22.appendChild(del33);
+            del11.appendChild(del22);
+            tabr11.appendChild(del11)
+            del11.className = `sdel`;
+            del22.style.cursor = `pointer`
+            let ssde = document.getElementsByClassName(`sdel`);
+            let p;
+            for (p = 0; p < ssde.length; p++) {
+                ssde[p].onclick = function () {
+                    this.parentNode.style.display = `none`
+                }
+            };
+            // mark
+            let mark1 = document.createElement(`td`);
+            let mark2 = document.createTextNode(`\u2714`);
+            mark1.appendChild(mark2);
+            tabr11.appendChild(mark1);
+            mark1.className = `clab`;
+            mark1.style.cursor = `pointer`;
+            let wh2 = document.getElementsByClassName(`clab`);
+            for (let q = 0; q < wh2.length; q++) {
+                wh2[q].addEventListener('click', function () {
+                    this.parentElement.style.textDecoration = `line-through`;
+                    this.parentElement.style.backgroundColor = `green`;
+                    clearInterval(kas);
+                    clearInterval(kas);
+                });
+            };
+            // EDIT
+
+            let edit1 = document.createElement(`td`);
+            let edit2 = document.createTextNode(`✎`);
+            edit1.appendChild(edit2);
+            tabr11.appendChild(edit1);
+            edit1.className = `edit-task`;
+            edit1.style.cursor = `pointer`;
+
+            let editButtons = document.getElementsByClassName(`edit-task`);
+            for (let e = 0; e < editButtons.length; e++) {
+                editButtons[e].addEventListener('click', function () {
+                    let taskText = this.parentElement.firstChild.textContent;
+                    let newText = prompt('Edit task:', taskText);
+                    if (newText !== '') {
+                        this.parentElement.firstChild.textContent = newText;
+                    }
+                });
+            };
+
+
+            // countdown
+            const countdown = document.createElement('td');
+            startCountdown(countdown);
+            tabr11.appendChild(countdown)
+
+            function startCountdown(countdown) {
+                function updateCountdown() {
+                    const currentTime = new Date().getTime();
+                    const timeDifference = inpthh - currentTime;
+
+                    if (timeDifference <= 0) {
+                        countdown.textContent = 'DONE';
+                    } else {
+                        const hours = Math.floor(timeDifference / (1000 * 60 * 60));
+                        const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+                        const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+                        countdown.textContent = `${formatTime(hours)}:${formatTime(minutes)}:${formatTime(seconds)}`;
+                    }
+                }
+
+                function formatTime(time) {
+                    return time < 10 ? `0${time}` : time;
+                }
+
+                updateCountdown();
+                kas = setInterval(updateCountdown, 1000);
+            };
+
+
+            document.getElementById('1input').value = " ";
+            document.getElementById('1input').focus();
+        };
+    </script>
+
+    <script>
+        let availableSubjects = ["English", "Economics", "Mathematics", "Yoruba", "Civic", "Computer", "Social Studies"];
+        function updateAvailableSubjectsTable() {
+            let availableSubjectsTableBody = document.getElementById("availableSubjectsBody");
+            availableSubjectsTableBody.innerHTML = "";
+
+            for (let i = 0; i < availableSubjects.length; i++) {
+                let subject = availableSubjects[i];
+                let row = document.createElement("tr");
+                let nameCell = document.createElement("td");
+                nameCell.appendChild(document.createTextNode(subject));
+
+                let addButtonCell = document.createElement("td");
+                let addButton = document.createElement("input");
+                addButton.type = 'checkbox';
+                addButton.onclick = function () {
+                    addSubjectToSelected(subject);
+                };
+                addButtonCell.appendChild(addButton);
+
+                row.appendChild(nameCell);
+                row.appendChild(addButtonCell);
+                availableSubjectsTableBody.appendChild(row);
+            }
+        }
+
+        function updateSelectedSubjectsTable(subject) {
+            let selectedSubjectsTableBody = document.getElementById("selectedSubjectsBody");
+            let row = document.createElement("tr");
+            row.id = subject;
+
+            let nameCell = document.createElement("td");
+            nameCell.appendChild(document.createTextNode(subject));
+
+            let removeButtonCell = document.createElement("td");
+            let removeButton = document.createElement("span");
+            let closeButton = document.createTextNode("\u00d7");
+            removeButton.appendChild(closeButton);
+            removeButton.style.cursor = "pointer";
+            removeButton.style.fontSize = "25px";
+            removeButton.style.background = "red";
+            removeButton.onclick = function () {
+                removeSubjectFromSelected(subject);
+            };
+            removeButtonCell.appendChild(removeButton);
+
+            row.appendChild(nameCell);
+            row.appendChild(removeButtonCell);
+            selectedSubjectsTableBody.appendChild(row);
+        }
+        function addSubjectToSelected(subject) {
+            let index = availableSubjects.indexOf(subject);
+            if (index > -1) {
+                availableSubjects.splice(index, 1);
+                updateAvailableSubjectsTable();
+                updateSelectedSubjectsTable(subject);
+            }
+        }
+
+        function removeSubjectFromSelected(subject) {
+            let selectedSubjectsTableBody = document.getElementById("selectedSubjectsBody");
+            let row = document.getElementById(subject);
+            selectedSubjectsTableBody.removeChild(row);
+            availableSubjects.push(subject);
+            updateAvailableSubjectsTable();
+        }
+
+
+
+        updateAvailableSubjectsTable();
+
+    </script>
+
+</body>
+
+</html>
