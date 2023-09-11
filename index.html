@@ -111,7 +111,7 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">swift JAVASCRIPT PROJECT</a>
+            <a class="navbar-brand" href="#">ALOFE EMMANUEL JAVASCRIPT PROJECT</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
                 aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -395,6 +395,7 @@
                         <input type="button" class="btn btn-primary" onclick="minus()" value="-">
                         <input type="button" class="btn btn-primary" onclick="multiply()" value="*">
                         <input type="button" class="btn btn-primary" onclick="divide()" value="/">
+                        <input type="button" class="btn btn-primary" onclick="clearx()" value="clear">
                         <br> <br>
                         <p>= <span id="result11"
                                 style="border: 2px solid black; font-weight: bold; padding: 10px;">Answer is
@@ -515,11 +516,12 @@
                             9:</span>HOTEL BOOKING WITH COUNTDOWN
                     </h2>
                     <h1>Hotel rentals</h1>
-                    <input id="hdays">
+                    <input id="hdays" placeholder="input the number of days">
                     <button type="button" onclick="click1()">Click to Calculate</button>
                     <div>
-                        <p style="font-size: 30px; color: blue;">AMOUNT FOR THE DAYS:<span id="22price">0</span></p>
-                        <p style="font-size: 30px; color: blue;">TIME LEFT: <span id="33price">0</span></p>
+                        <p style="font-size: 30px; color: blue;">Amount for the days:<span id="22price">0</span></p>
+                        <p style="font-size: 30px; color: blue; display: none;" id="hote5">Time left: <span
+                                id="33price">0</span></p>
                     </div>
                 </div>
             </div>
@@ -672,8 +674,8 @@
                             style="background-color: black; color: white; padding: 7px; border-radius: 10px;"> TASK
                             15:</span>SECOND TO DO LIST
                     </h2>
-                    <input type="text" id="1input">
-                    <input type="datetime-local" id="1date">
+                    <input type="text" id="1input" placeholder="input the task here">
+                    <input type="datetime-local" id="1date" value=""> <label for="">input the finsh time here</label>
                     <br><br>
                     <button onclick="todo()">ADD+</button>
                     <br>
@@ -700,9 +702,9 @@
                             style="background-color: black; color: white; padding: 7px; border-radius: 10px;"> TASK
                             16:</span> ADD AND DELETE MACHINE
                     </h2>
-                    <div class="table" style="height: 400px; overflow-y: scroll;">
+                    <div class="table">
                         <h1>Select your subject</h1>
-                        <div style="display: flex; flex-direction: row; justify-content: space-around;">
+                        <div style="display: flex; flex-direction: row; ">
                             <div>
                                 <table>
                                     <h3>Available Subjects</h3>
@@ -758,9 +760,7 @@
                 task1set.innerHTML = (`<h2>Today is ${days0[oneday]} - Go to work</h2>`)
             }
         }
-    </script>
 
-    <script>
         // TASK 2
         function jaage() {
             let age = prompt('what is Nigerian age ?');
@@ -781,8 +781,7 @@
                 default: alert('wrong');
             };
         };
-    </script>
-    <script>
+
         //TASK 4
         function plus() {
             let num1 = document.getElementById("value11").value;
@@ -790,45 +789,57 @@
             let sum = Number(num1) + Number(num2);
             document.getElementById("result11").innerHTML = sum;
             document.getElementById("span1").innerHTML = "+";
-        }
+        };
 
         function minus() {
             let num1 = document.getElementById("value11").value;
             let num2 = document.getElementById("value22").value;
             document.getElementById("result11").innerHTML = num1 - num2;
             document.getElementById("span1").innerHTML = "-";
-        }
+        };
 
         function multiply() {
             let num1 = document.getElementById("value11").value;
             let num2 = document.getElementById("value22").value;
             document.getElementById("result11").innerHTML = num1 * num2;
             document.getElementById("span1").innerHTML = "*";
-        }
+        };
 
         function divide() {
             let num1 = document.getElementById("value11").value;
             let num2 = document.getElementById("value22").value;
             document.getElementById("result11").innerHTML = num1 / num2;
             document.getElementById("span1").innerHTML = "/";
-        }
-    </script>
-    <script>
+        };
+        function clearx() {
+            document.getElementById("value11").value = ' ';
+            document.getElementById("value22").value = ' ';
+            document.getElementById("result11").innerHTML = ' ANSWER IS HERE';
+
+        };
+
         // TASK 5
         function calcc() {
+            const numformat = /^[0-9]+$/;
             let so = Number(document.getElementById("val").value);
+            document.getElementById("val").value = ' ';
             let bb = 10 / 100 * so;
             let dod = document.getElementById("op").value;
             let co = bb * dod + so;
-            document.getElementById('resultin').innerHTML = `You payment is ${co} after ${dod} months `;
-        }
-    </script>
-    <script>
+            document.getElementById('resultin').innerHTML = `You withdrawal will be ${co} NAIRA after ${dod} months of investing ${so} NAIRA with us`;
+            // if (so == ''|| !so.match(numformat)){
+            //     alert('invalid input parameter!')
+            //     return false;
+            // }
+        };
+
         // TASK 6
         function taskl() {
             let inica = Number(document.querySelector(`#vall`).value);
             let perca = Number(document.querySelector(`#valk`).value);
             let monca = Number(document.querySelector(`#opp`).value);
+            document.querySelector(`#vall`).value = ' ';
+            document.querySelector(`#valk`).value = ' ';
             let moncad = document.getElementById('loanper');
             let Percentage = perca / 100;
             let TotalAmount = inica * perca + inica;
@@ -836,9 +847,8 @@
             moncad.innerHTML = `${perca}`;
             let perr = TotalAmount / monca;
             document.querySelector(`#resultini`).innerHTML = ` Your monthly repayment will be ${perr} Naria with ${dmm} months for the payment and total amount of payment is ${TotalAmount} Naria`;
-        }
-    </script>
-    <script>
+        };
+
         let dbg = document.querySelector('.top');
         let dchanget = document.querySelector('.gnah');
         let dchangeb = document.querySelector('.gnumber');
@@ -891,8 +901,11 @@
                 bcheck.style.display = 'none'
                 bagain.style.display = 'inline-block';
                 document.querySelector('.gmynumber').value = '';
+
                 if (highestscore < score) {
+                    highestscore = score;
                     document.querySelector('#ghigh').innerHTML = score;
+                    console.log(highestscore);
                 }
             }
         };
@@ -908,12 +921,13 @@
             score = 20;
             secretNumber = Math.trunc(Math.random() * 20) + 1;
             console.log(secretNumber);
-        })
-    </script>
-    <script>
+        });
+
         // TASK 9
         function click1() {
             let new2 = parseInt(document.getElementById('hdays').value);
+            let hote55 = document.getElementById('hote5');
+            hote55.style.display = "inline-block"
             const xmas = new Date().getTime() + (new2 * 24 * 60 * 60 * 1000);
             k = setInterval(function () {
                 let now = new Date().getTime();
@@ -930,10 +944,8 @@
             }, 1000);
 
             document.getElementById('22price').innerHTML = (new2 * 5000);
-        }
+        };
 
-    </script>
-    <script>
         // TASK 10
         function Time() {
             let dhours = new Date().getHours();
@@ -958,10 +970,9 @@
             document.getElementById('ddhrs').innerHTML = dhours;
             document.getElementById('ddMin').innerHTML = dmins;
             document.getElementById('ddSec').innerHTML = dsecs;
-        }
-        setInterval(Time, 1000)
-    </script>
-    <script>
+        };
+        setInterval(Time, 1000);
+
         // TASK 11
         function prime2() {
             let n;
@@ -985,8 +996,7 @@
                 }
             }
         };
-    </script>
-    <script>
+        // TASK 11
         let timerr = document.getElementById('timer');
         let destin = document.getElementById('destina');
         let minn = document.getElementById('min');
@@ -1080,8 +1090,6 @@
         startt.addEventListener('click', startengine);
         stopp.addEventListener('click', stopengine);
         recee.addEventListener('click', receengine);
-    </script>
-    <script>
         // TASK 14
 
         const inpt = document.getElementById('addinpt');
@@ -1142,9 +1150,8 @@
         })
         abtn.addEventListener("click", kay);
 
-    </script>
 
-    <script>
+        // TASK 15
         let kas;
         function todo() {
 
@@ -1169,6 +1176,7 @@
             let tabr11 = document.createElement(`tr`);
             // 1st tr
             let tabd11 = document.createElement(`td`);
+            let tabi11x = inpt11.value;
             let tabi11 = document.createTextNode(inpt11.value);
             tabd11.appendChild(tabi11);
             tabr11.appendChild(tabd11);
@@ -1232,18 +1240,14 @@
             tabr11.appendChild(edit1);
             edit1.className = `edit-task`;
             edit1.style.cursor = `pointer`;
-
             let editButtons = document.getElementsByClassName(`edit-task`);
+
             for (let e = 0; e < editButtons.length; e++) {
                 editButtons[e].addEventListener('click', function () {
-                    let taskText = this.parentElement.firstChild.textContent;
-                    let newText = prompt('Edit task:', taskText);
-                    if (newText !== '') {
-                        this.parentElement.firstChild.textContent = newText;
-                    }
+                    document.getElementById(`1input`).value = tabi11x;
+                    this.parentNode.style.display = `none`
                 });
             };
-
 
             // countdown
             const countdown = document.createElement('td');
@@ -1275,11 +1279,12 @@
 
 
             document.getElementById('1input').value = " ";
+            document.getElementById('1date').value = " ";
             document.getElementById('1input').focus();
         };
-    </script>
 
-    <script>
+
+        // TASK16
         let availableSubjects = ["English", "Economics", "Mathematics", "Yoruba", "Civic", "Computer", "Social Studies"];
         function updateAvailableSubjectsTable() {
             let availableSubjectsTableBody = document.getElementById("availableSubjectsBody");
